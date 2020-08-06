@@ -1,0 +1,10 @@
+{
+    "imports": {
+        "std/": "https://deno.land/std@0.63.0/",
+        "utils": "./utils/index.ts",
+        "models": "./models/index.ts",
+        "merlin": "https://deno.land/x/merlin/mod.ts",
+        "store": "https://raw.githubusercontent.com/felixblaschke/storeosaurus/master/mod.ts",
+        "attain": "https://deno.land/x/attain/mod.ts"
+    }
+}
