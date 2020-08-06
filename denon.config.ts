@@ -17,6 +17,7 @@ const config: DenonConfig = {
         read: '_store',
         write: '_store',
       },
+      lock: 'lock.json'
     },
   },
   watcher: {
