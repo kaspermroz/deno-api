@@ -3,7 +3,9 @@ import { Store } from 'store';
 import { Counter } from 'models';
 import { initStore, logger } from 'utils';
 
-await initStore();
+const { STORE_PATH } = Deno.env.toObject();
+
+await initStore(STORE_PATH);
 
 const app = new App();
 
@@ -11,7 +13,7 @@ app.use(logger);
 
 app.get('/', async (_req: Request, res: Response) => {
     const counter = await Store.open<Counter>({
-        filePath: '_store/counter.json',
+        filePath: `${STORE_PATH}/counter.json`,
         default: {
             value: 0,
         }
